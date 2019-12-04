@@ -45,9 +45,9 @@ Apple
 APPLE
 Apple2
 1Apple              #not allowed (no start with number)
-account number
+account number      #not allowed (no space)
 account_number
-account.number
+account.number      #not allowed (no dot)
 accountNumber
 account#            #not allowed (no #)
 pi
@@ -57,7 +57,7 @@ Fred
 GreatBigVariable
 greatBigVariable
 great_big_variable
-great.big.variable
+great.big.variable  #not allowed (no dot)
 2x                  #not allowed (no start with number)
 x2x                
 total%              #not allowed (no Sonderzeichen)
@@ -75,7 +75,8 @@ a = 45      # The value of the variable was defined after printing
 # Q9: Explain the mistake in this code:
 pi2 = float(3.14)
 print(pi2)
-# There is no mistake? Printing works? Maybe only that there is no need to label it as a float?
+# Constant should to be written in capital letter (PI2 = 3.13)
+# no need for float since it's already a float
 
 
 # Q10: This program runs, but the code still could be better. Explain what is wrong with the code.
@@ -85,7 +86,7 @@ x = 3.14  # This two lines are unnecesary
 pi3 = x   #
 area = pi3 * radius ** 2
 print(area)
-# Better:
+# Better (no redundant code):
 radius = float(input("Radius:"))
 pi3 = 3.14
 area = pi3 * radius ** 2
@@ -110,8 +111,8 @@ print(a)
 
 
 # Q13: Explain the mistake in the following code:
-# radius = input(float("Enter the radius:"))
-# radius = float(input("Enter the radius:"))  # Wrong order of float & input
+# radius = input(float("Enter the radius:"))  #Wrong order of float & input
+# radius = float(input("Enter the radius:"))
 
 
 # Q14: Do all these print the same value? Which one is better to use and why?
@@ -132,11 +133,12 @@ print(   2 /    3+    4  )
 # Q17: What is a single quote and what is a double quote? Give and label an example of both.
 print('Hihi')
 print("Hoho")
-# When should I use what?
+# When should I use what? --> Doesn't matter
 
 
 # Q18: Write a Python program that will use escape codes to print a double-quote and a new line using the
 # Window's standard. (Note: I'm asking for the Window's standard here. Look it up out of Chapter 1.)
+print("\"")
 print("Now I will start a \nnew line")
 
 
@@ -168,6 +170,6 @@ print(x)
 
 
 # Q24: Correct the following code:
-# value = int(input(print("Enter your age"))) # You cant print and input at the same time
+# value = int(input(print("Enter your age"))) #You cant print and input at the same time
 value = int(input("Enter your age:"))
 print(value)
